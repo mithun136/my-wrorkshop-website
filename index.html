@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workshop Feedback | CampusConnect</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#"><span class="brand-mark">W</span> Workshop<span class="brand-light">Pulse</span></a>
+    <span class="nav-tag">FEEDBACK PORTAL</span>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow"><span class="live-dot"></span> YOUR VOICE MATTERS</span>
+      <h1>Help us make<br><span>every workshop</span> better.</h1>
+      <p>Your feedback helps us create more engaging, useful and inspiring learning experiences.</p>
+      <div class="hero-meta"><span>✦ Quick & easy</span><span>✦ Honest opinions welcome</span></div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+      <div class="art-card"><div class="art-stars">★★★★★</div><div class="art-line"></div><div class="art-line short"></div><div class="art-check">✓</div></div>
+      <div class="art-bubble bubble-one">💬</div><div class="art-bubble bubble-two">✦</div>
+    </div>
+  </div>
+</header>
+
+<main class="container main-wrap">
+  <div class="section-heading">
+    <div><span class="eyebrow dark-eyebrow">FEEDBACK FORM</span><h2>How was your experience?</h2><p class="muted">It only takes a minute. Tell us what you think.</p></div>
+    <span class="secure-pill">🔒 Your feedback is safe</span>
+  </div>
+
+  <div class="row g-4 align-items-start">
+    <div class="col-lg-7">
+      <section class="panel form-panel">
+        <form id="feedbackForm" novalidate>
+          <div class="mb-4">
+            <label for="eventName" class="form-label">Workshop / Event name <span class="required">*</span></label>
+            <select class="form-select" id="eventName" required>
+              <option value="">Choose the workshop you attended</option>
+              <option>Web Development Bootcamp</option>
+              <option>AI & Machine Learning Workshop</option>
+              <option>UI/UX Design Masterclass</option>
+              <option>Cyber Security Awareness</option>
+              <option>Entrepreneurship & Innovation</option>
+              <option>Other Technical Workshop</option>
+            </select>
+            <div class="invalid-feedback">Please select an event.</div>
+          </div>
+
+          <div class="mb-4">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+              <label for="participantName" class="form-label mb-0">Your name</label>
+              <label class="anonymous-toggle"><input type="checkbox" id="anonymous"> <span>Submit anonymously</span></label>
+            </div>
+            <input type="text" class="form-control mt-2" id="participantName" placeholder="Enter your full name">
+            <div class="form-text">Your name is optional when anonymous mode is selected.</div>
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label d-block">Overall rating <span class="required">*</span></label>
+            <div class="rating-picker" role="radiogroup" aria-label="Rate the workshop">
+              <button type="button" class="star-btn" data-rating="1" aria-label="1 star">★</button>
+              <button type="button" class="star-btn" data-rating="2" aria-label="2 stars">★</button>
+              <button type="button" class="star-btn" data-rating="3" aria-label="3 stars">★</button>
+              <button type="button" class="star-btn" data-rating="4" aria-label="4 stars">★</button>
+              <button type="button" class="star-btn" data-rating="5" aria-label="5 stars">★</button>
+              <span id="ratingLabel" class="rating-label">Select a rating</span>
+            </div>
+            <input type="hidden" id="rating" value="">
+            <div class="field-error" id="ratingError" aria-live="polite"></div>
+          </div>
+
+          <div class="mb-4">
+            <label for="comments" class="form-label">Your comments <span class="required">*</span></label>
+            <textarea class="form-control" id="comments" rows="4" maxlength="500" placeholder="What did you enjoy? What could we improve?" required></textarea>
+            <div class="d-flex justify-content-between"><div class="field-error" id="commentsError"></div><small class="char-count"><span id="charCount">0</span>/500</small></div>
+          </div>
+          <div class="form-alert" id="formAlert" role="alert"></div>
+          <button type="submit" class="btn submit-btn w-100">Submit feedback <span>→</span></button>
+          <p class="privacy-note">By submitting, you agree that this demo feedback may be stored in this browser.</p>
+        </form>
+      </section>
+    </div>
+
+    <div class="col-lg-5">
+      <section class="panel summary-panel">
+        <div class="panel-top"><div><span class="eyebrow dark-eyebrow">LIVE OVERVIEW</span><h3>Feedback snapshot</h3></div><span class="live-pill">● LIVE</span></div>
+        <div class="average-wrap">
+          <div class="average-number" id="averageRating">0.0</div>
+          <div><div class="average-stars" id="averageStars">☆☆☆☆☆</div><div class="muted small" id="totalReviews">No reviews yet</div></div>
+        </div>
+        <div class="distribution" id="distribution">
+          <div class="dist-row"><span>5 ★</span><div class="progress"><div class="progress-bar" style="width:0%"></div></div><span class="dist-count">0</span></div>
+          <div class="dist-row"><span>4 ★</span><div class="progress"><div class="progress-bar" style="width:0%"></div></div><span class="dist-count">0</span></div>
+          <div class="dist-row"><span>3 ★</span><div class="progress"><div class="progress-bar" style="width:0%"></div></div><span class="dist-count">0</span></div>
+          <div class="dist-row"><span>2 ★</span><div class="progress"><div class="progress-bar" style="width:0%"></div></div><span class="dist-count">0</span></div>
+          <div class="dist-row"><span>1 ★</span><div class="progress"><div class="progress-bar" style="width:0%"></div></div><span class="dist-count">0</span></div>
+        </div>
+        <div class="summary-footer"><span>📊</span><div><strong>Every opinion counts</strong><small>Ratings update automatically after each submission.</small></div></div>
+      </section>
+      <section class="tip-card"><div class="tip-icon">✦</div><div><strong>Quick tip</strong><p>Be specific! Mention one thing you loved and one thing we can improve.</p></div></section>
+    </div>
+  </div>
+
+  <section class="feedback-section">
+    <div class="section-heading compact-heading"><div><span class="eyebrow dark-eyebrow">COMMUNITY VOICES</span><h2>Recent feedback</h2><p class="muted">See what participants are saying.</p></div><span class="review-count" id="reviewCount">0 entries</span></div>
+    <div id="feedbackList" class="feedback-grid">
+      <div class="empty-state"><div class="empty-icon">✎</div><h4>No feedback yet</h4><p>Be the first to share your workshop experience.</p></div>
+    </div>
+  </section>
+  <footer><span class="footer-brand">WorkshopPulse</span><span>Built for better learning experiences · Classroom prototype</span></footer>
+</main>
+<div class="toast-container position-fixed bottom-0 end-0 p-3"><div id="successToast" class="toast" role="status"><div class="toast-body">✓ Feedback submitted successfully. Thank you!</div></div></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
