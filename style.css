@@ -1,0 +1,236 @@
+/* MIDNIGHT NEON THEME */
+
+:root {
+    --bg: #080b18;
+    --card: #11182b;
+    --neon: #00f5d4;
+    --purple: #9b5cff;
+    --white: #f5f7ff;
+    --muted: #a0a9c0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: var(--bg);
+    color: var(--white);
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+
+.navbar {
+    background: rgba(8, 11, 24, 0.95);
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(0,245,212,0.2);
+}
+
+.navbar-brand {
+    color: var(--neon) !important;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.brand-light {
+    color: white;
+}
+
+.nav-tag {
+    color: var(--muted);
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(circle at 80% 30%, 
+        rgba(155,92,255,0.2), transparent 35%),
+        radial-gradient(circle at 20% 80%, 
+        rgba(0,245,212,0.12), transparent 40%),
+        var(--bg);
+    padding: 70px 0;
+}
+
+.hero-inner {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.hero-copy {
+    max-width: 750px;
+}
+
+.eyebrow {
+    color: var(--neon);
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.live-dot {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    background: var(--neon);
+    border-radius: 50%;
+    box-shadow: 0 0 12px var(--neon);
+}
+
+.hero h1 {
+    font-size: clamp(35px, 6vw, 65px);
+    font-weight: 800;
+    margin: 20px 0;
+    line-height: 1.15;
+}
+
+.hero h1 span {
+    color: var(--neon);
+}
+
+.hero p {
+    color: var(--muted);
+    font-size: 17px;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 55px 20px;
+}
+
+.container {
+    max-width: 1100px;
+}
+
+/* CARDS */
+
+.card {
+    background: var(--card);
+    border: 1px solid rgba(0,245,212,0.18);
+    border-radius: 18px;
+    padding: 25px;
+    color: var(--white);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--neon);
+    box-shadow: 0 10px 30px rgba(0,245,212,0.1);
+}
+
+/* HEADINGS */
+
+h2, h3, h4 {
+    color: var(--white);
+    font-weight: 700;
+}
+
+p {
+    color: var(--muted);
+}
+
+/* FORMS */
+
+form {
+    background: var(--card);
+    padding: 30px;
+    border-radius: 18px;
+    border: 1px solid rgba(155,92,255,0.3);
+}
+
+label {
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 13px;
+    background: #080e20;
+    border: 1px solid #303b56;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 18px;
+    outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--neon);
+    box-shadow: 0 0 10px rgba(0,245,212,0.15);
+}
+
+/* BUTTONS */
+
+button, .btn {
+    background: linear-gradient(90deg, 
+    var(--neon), var(--purple));
+    color: #080b18 !important;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover, .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0,245,212,0.3);
+}
+
+/* LINKS */
+
+a {
+    color: var(--neon);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--purple);
+}
+
+/* FOOTER */
+
+footer {
+    background: #050712;
+    color: var(--muted);
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid rgba(0,245,212,0.2);
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 45px 15px;
+        min-height: 350px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .card, form {
+        padding: 20px;
+    }
+
+    .navbar-brand {
+        font-size: 20px;
+    }
+}
